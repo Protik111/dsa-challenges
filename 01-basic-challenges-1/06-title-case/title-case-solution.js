@@ -1,7 +1,7 @@
 // Solution 1 - Using a for loop
 function titleCase(str) {
   // Split the string into an array of words
-  const words = str.toLowerCase().split(' ');
+  const words = str.toLowerCase().split(" ");
 
   // Loop through the array of words
   for (let i = 0; i < words.length; i++) {
@@ -10,9 +10,10 @@ function titleCase(str) {
   }
 
   // Join the array of words into a string and return it
-  return words.join(' ');
+  return words.join(" ");
 }
 
+//Revision: second way does not work
 // Solution 2 - Using a regular expression
 function titleCase(str) {
   // Replace the first letter of each word with its uppercase equivalent

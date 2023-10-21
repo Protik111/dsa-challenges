@@ -35,7 +35,7 @@ function removeNonAlphanumeric(str) {
 
 function isAlphaNumeric(char) {
   const code = char.codeCodeAt(0);
-  return (code >= 48 && code <= 57) || (code > 97 && cpde <= 122);
+  return (code >= 48 && code <= 57) || (code > 97 && code <= 122);
 }
 
 function reverseString(str) {

@@ -1,7 +1,7 @@
 // Solution 1
 function findMissingLetter(arr) {
   // Create a string of the alphabet
-  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   // Find the index of the first letter in the array in the alphabet string
   const startIndex = alphabet.indexOf(arr[0]);
 
@@ -14,7 +14,7 @@ function findMissingLetter(arr) {
   }
 
   // If no letter is missing, return an empty string
-  return '';
+  return "";
 }
 
 // Solution 2
@@ -34,7 +34,7 @@ function findMissingLetter(arr) {
     start = current;
   }
   // If no letter is missing, return an empty string
-  return '';
+  return "";
 }
 
 module.exports = findMissingLetter;

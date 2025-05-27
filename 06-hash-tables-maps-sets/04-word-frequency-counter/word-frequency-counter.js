@@ -17,6 +17,4 @@ function wordFrequencyCounter(str) {
   return wordMap;
 }
 
-// map --> {the: 3, man: 1}
-
 module.exports = wordFrequencyCounter;

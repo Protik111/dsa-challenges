@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "6yGzZ_RHKZkyjImEwNG-M",
+      "type": "text",
+      "x": 287.1506740025111,
+      "y": 110.3060716901505,
+      "width": 636.73193359375,
+      "height": 729,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 339017676,
+      "version": 123,
+      "versionNonce": 1480478284,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1749112074574,
+      "link": null,
+      "locked": false,
+      "text": "Pattern Name: Set + Sequence Start Check\nAlso called: HashSet + Expand\n\nLoop 1: num = 100\nnum - 1 = 99\nnumSet.has(99) → ❌ false\nSo: start a sequence from 100\nCheck for 101 → not found → streak is 1\n\nLoop 2: num = 4\nnum - 1 = 3\nnumSet.has(3) → ✅ true → skip (it's part of someone else's sequence)\n\nLoop 3: num = 200\nnum - 1 = 199\nnumSet.has(199) → ❌ false\nStart a sequence from 200 → next? 201? ❌ → streak = 1\n\nLoop 4: num = 1\nnum - 1 = 0\nnumSet.has(0) → ❌ false\nStart a sequence from 1:\n2 ✅\n3 ✅\n4 ✅\n→ streak = 4\n",
+      "fontSize": 20,
+      "fontFamily": 6,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Pattern Name: Set + Sequence Start Check\nAlso called: HashSet + Expand\n\nLoop 1: num = 100\nnum - 1 = 99\nnumSet.has(99) → ❌ false\nSo: start a sequence from 100\nCheck for 101 → not found → streak is 1\n\nLoop 2: num = 4\nnum - 1 = 3\nnumSet.has(3) → ✅ true → skip (it's part of someone else's sequence)\n\nLoop 3: num = 200\nnum - 1 = 199\nnumSet.has(199) → ❌ false\nStart a sequence from 200 → next? 201? ❌ → streak = 1\n\nLoop 4: num = 1\nnum - 1 = 0\nnumSet.has(0) → ❌ false\nStart a sequence from 1:\n2 ✅\n3 ✅\n4 ✅\n→ streak = 4\n",
+      "autoResize": true,
+      "lineHeight": 1.35
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

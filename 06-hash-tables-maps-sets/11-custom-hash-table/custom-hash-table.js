@@ -14,6 +14,7 @@ class HashTable {
     return hash % max;
   }
 
+  //set a value in the hash table
   set(key, value) {
     const index = this._hash(key, this.limit);
 
@@ -31,6 +32,20 @@ class HashTable {
 
       if (!inserted) {
         this.storage[index].push([[key, value]]);
+      }
+    }
+  }
+
+  //get the value for the key
+  get(key) {
+    const index = this._hash(key, this.limit);
+    if (this.storage[index] === undefined) {
+      return undefined;
+    } else {
+      for (let i = 0; i < this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) {
+          return this.storage[index][i][1];
+        }
       }
     }
   }

@@ -13,6 +13,27 @@ class HashTable {
 
     return hash % max;
   }
+
+  set(key, value) {
+    const index = this._hash(key, this.limit);
+
+    if (this.storage[index] === undefined) {
+      this.storage[index] = [[key, value]];
+    } else {
+      let inserted = false;
+
+      for (let i = 0; i < this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) {
+          this.storage[index][i][1] = value;
+          inserted = true;
+        }
+      }
+
+      if (!inserted) {
+        this.storage[index].push([[key, value]]);
+      }
+    }
+  }
 }
 
 module.exports = HashTable;

@@ -16,6 +16,23 @@ class Stack {
     return true;
   }
 
+  pop() {
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    this.top--;
+    return this.stack.pop();
+  }
+
+  peek() {
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    return this.stack[this.top];
+  }
+
   isEmpty() {
     return this.top === -1;
   }

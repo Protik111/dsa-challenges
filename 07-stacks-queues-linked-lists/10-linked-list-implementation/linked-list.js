@@ -22,6 +22,27 @@ class LinkedList {
 
     this.tail = node; // Now tail points to the correct last node.
   }
+
+  printAll() {
+    let current = this.next;
+
+    while (current !== null) {
+      console.log(current.data);
+      current = current.next;
+    }
+  }
+
+  get(index) {
+    let current = this.head;
+    let i = 0;
+
+    while (i < current) {
+      current = current.next;
+      i++;
+    }
+
+    return current.data;
+  }
 }
 
 module.exports = { Node, LinkedList };

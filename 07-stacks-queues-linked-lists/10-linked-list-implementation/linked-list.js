@@ -65,6 +65,24 @@ class LinkedList {
       previous.next = node;
     }
   }
+
+  removeFrom(index) {
+    if (index === 0) {
+      this.head = this.head.next;
+    } else {
+      let current = this.next;
+      let previous = null;
+      let i = 0;
+
+      while (i < index) {
+        previous = current;
+        current = current.next;
+        i++;
+      }
+
+      previous.next = current.next; //JavaScript uses reference counting and/or reachability, it sees that nodeB is unreachable.  JavaScript's garbage collector will automatically delete it since it's no longer referenced.
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };

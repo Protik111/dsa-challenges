@@ -36,7 +36,7 @@ class LinkedList {
     let current = this.head;
     let i = 0;
 
-    while (i < current) {
+    while (i < index) {
       current = current.next;
       i++;
     }

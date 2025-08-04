@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "uV7Y-nJKhU8cBphZr6vMV",
+      "type": "text",
+      "x": 259.9999694824219,
+      "y": -1383.9420793986387,
+      "width": 777.9105224609375,
+      "height": 2508.4173358872495,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 19341529,
+      "version": 86,
+      "versionNonce": 823587575,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1754284037218,
+      "link": null,
+      "locked": false,
+      "text": "🔢 For even-length list:\nExample: 1 -> 2 -> 3 -> 4\n\nInitial: slow = 1, fast = 1\n\nStep 1:\n\n    slow = 2\n\n    fast = 3\n\nStep 2:\n\n    slow = 3\n    \n    fast = null (because fast.next.next is null)\n\n✅ Loop exits → fast === null → even case\n\n🔢 For odd-length list:\nExample: 1 -> 2 -> 3 -> 4 -> 5\n\nInitial: slow = 1, fast = 1\n\nStep 1:\n\n    slow = 2\n\n    fast = 3\n\nStep 2:\n\n    slow = 3\n\n    fast = 5\n\nStep 3:\n\n    fast.next.next doesn't exist → loop exits\n\nAt this point:\n\nfast !== null (it's at the last node: 5)\n\nfast.next === null → triggers loop stop\n\n❌ fast !== null, so it's an odd case",
+      "fontSize": 39.5337641589795,
+      "fontFamily": 6,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "🔢 For even-length list:\nExample: 1 -> 2 -> 3 -> 4\n\nInitial: slow = 1, fast = 1\n\nStep 1:\n\n    slow = 2\n\n    fast = 3\n\nStep 2:\n\n    slow = 3\n    \n    fast = null (because fast.next.next is null)\n\n✅ Loop exits → fast === null → even case\n\n🔢 For odd-length list:\nExample: 1 -> 2 -> 3 -> 4 -> 5\n\nInitial: slow = 1, fast = 1\n\nStep 1:\n\n    slow = 2\n\n    fast = 3\n\nStep 2:\n\n    slow = 3\n\n    fast = 5\n\nStep 3:\n\n    fast.next.next doesn't exist → loop exits\n\nAt this point:\n\nfast !== null (it's at the last node: 5)\n\nfast.next === null → triggers loop stop\n\n❌ fast !== null, so it's an odd case",
+      "autoResize": true,
+      "lineHeight": 1.35
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

@@ -40,6 +40,26 @@ class DoublyLinkedList {
 
     this.length++;
   }
+
+  insertAt(index, data) {
+    if (index < 0 || this.length < index) return null;
+    if (index === 0) return this.prepend(data);
+    if (index === this.length) return this.append(data);
+
+    let currentNode = this.head;
+    const newNode = new Node(data);
+
+    for (let i = 0; i < index - 1; i++) {
+      currentNode = currentNode.next;
+    }
+
+    newNode.next = currentNode.next;
+    newNode.prev = currentNode;
+    currentNode.next.prev = newNode;
+    currentNode.next = newNode;
+
+    this.length++;
+  }
 }
 
 module.exports = DoublyLinkedList;

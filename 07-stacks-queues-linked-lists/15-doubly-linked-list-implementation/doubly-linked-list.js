@@ -65,12 +65,22 @@ class DoublyLinkedList {
     if (index < 0 || index >= this.length) return null;
 
     let currentNode = this.head;
-
     for (let i = 0; i < index; i++) {
       currentNode = currentNode.next;
     }
 
     return currentNode;
+  }
+
+  contain(data) {
+    let current = this.head;
+
+    while (current) {
+      if (current.data === data) return true;
+      current = current.next;
+    }
+
+    return false;
   }
 }
 

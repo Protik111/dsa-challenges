@@ -72,6 +72,30 @@ class DoublyLinkedList {
     return currentNode;
   }
 
+  remove(index) {
+    if (index < 0 || index >= this.length) return null;
+
+    if (index === 0) {
+      this.head = this.head.next;
+      if (this.head) this.head.prev = null;
+      else this.tail = null;
+    } else if (index === this.length - 1) {
+      this.tail = this.tail.prev;
+      if (this.tail) this.tail.next = null;
+      else this.head = null;
+    } else {
+      let currentNode = this.head;
+
+      for (let i = 0; i < index; i++) {
+        currentNode = currentNode.next;
+      }
+
+      // A <-> B <-> C <-> D
+      currentNode.prev.next = currentNode.next; //This sets B’s next to point to D instead of C.
+      currentNode.next.prev = currentNode.prev; //This sets D’s prev to point to B instead of C.
+    }
+  }
+
   contains(data) {
     let current = this.head;
 

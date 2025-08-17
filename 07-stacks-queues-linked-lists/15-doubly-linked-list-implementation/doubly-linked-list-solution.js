@@ -95,8 +95,9 @@ class DoublyLinkedList {
       for (let i = 0; i < index; i++) {
         currentNode = currentNode.next;
       }
-      currentNode.prev.next = currentNode.next;
-      currentNode.next.prev = currentNode.prev;
+      //A <-> B <-> C <-> D
+      currentNode.prev.next = currentNode.next; //This sets B’s next to point to D instead of C.
+      currentNode.next.prev = currentNode.prev; //This sets D’s prev to point to B instead of C.
     }
 
     this.length--;

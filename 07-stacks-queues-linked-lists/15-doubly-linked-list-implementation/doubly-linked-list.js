@@ -72,7 +72,7 @@ class DoublyLinkedList {
     return currentNode;
   }
 
-  contain(data) {
+  contains(data) {
     let current = this.head;
 
     while (current) {

@@ -37,11 +37,11 @@ function breadthFirstTraversal(root) {
     const current = queue.shift();
     result.push(current.data);
 
-    if (current.left) {
+    if (result.left) {
       queue.push(current.left);
     }
 
-    if (current.right) {
+    if (result.right) {
       queue.push(current.right);
     }
   }
@@ -70,7 +70,7 @@ We then enqueue the left and right children of the current node, if they exist. 
 Now, let's refactor this code to use the `Queue` class. You can do this as a challenge, or you can look at the code below. I will also add tests to ensure the code works correctly.
 
 ```js
-const Queue = require('./queue');
+const Queue = require("./queue");
 
 class Node {
   constructor(data) {
@@ -117,20 +117,20 @@ In this refactored code, we used the `Queue` class instead of a standard array f
 ## Test Cases
 
 ```js
-describe('Breadth-First Traversal', () => {
-  test('Should perform breadth-first traversal on the binary tree', () => {
+describe("Breadth-First Traversal", () => {
+  test("Should perform breadth-first traversal on the binary tree", () => {
     // Create a binary tree:      a
     //                          /   \
     //                         b     c
     //                        / \    /
     //                       d   e  f
 
-    const root = new Node('a');
-    const nodeB = new Node('b');
-    const nodeC = new Node('c');
-    const nodeD = new Node('d');
-    const nodeE = new Node('e');
-    const nodeF = new Node('f');
+    const root = new Node("a");
+    const nodeB = new Node("b");
+    const nodeC = new Node("c");
+    const nodeD = new Node("d");
+    const nodeE = new Node("e");
+    const nodeF = new Node("f");
 
     root.left = nodeB;
     root.right = nodeC;
@@ -138,16 +138,16 @@ describe('Breadth-First Traversal', () => {
     nodeB.right = nodeE;
     nodeC.left = nodeF;
 
-    expect(breadthFirstTraversal(root)).toEqual(['a', 'b', 'c', 'd', 'e', 'f']);
+    expect(breadthFirstTraversal(root)).toEqual(["a", "b", "c", "d", "e", "f"]);
   });
 
-  test('Should return an empty array for an empty tree', () => {
+  test("Should return an empty array for an empty tree", () => {
     expect(breadthFirstTraversal(null)).toEqual([]);
   });
 
-  test('Should handle a tree with only the root node', () => {
-    const root = new Node('root');
-    expect(breadthFirstTraversal(root)).toEqual(['root']);
+  test("Should handle a tree with only the root node", () => {
+    const root = new Node("root");
+    expect(breadthFirstTraversal(root)).toEqual(["root"]);
   });
 });
 ```

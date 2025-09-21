@@ -100,6 +100,20 @@ class BinarySearchTree {
     }
     return node;
   }
+
+  _printNode(node) {
+    if (node === null) {
+      return;
+    }
+
+    this._printNode(node.left);
+    console.log(node.value);
+    this._printNode(node.right);
+  }
+
+  printTree() {
+    this._printNode(this.root);
+  }
 }
 
 module.exports = { Node, BinarySearchTree };

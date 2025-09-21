@@ -159,6 +159,14 @@ class BinarySearchTree {
     }
   }
 
+  //with private method
+  _findMin(node) {
+    while (node.left) {
+      node = node.left;
+    }
+    return node;
+  }
+
   // Print the tree in order
   printTree() {
     // In-order traversal

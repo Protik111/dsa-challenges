@@ -85,7 +85,7 @@ class BinarySearchTree {
       if (node === null) {
         return null;
       }
-
+      3;
       // If the value to be removed is less than the current node's value,
       // move to the left subtree and recursively remove the value
       if (value < node.value) {
@@ -123,6 +123,40 @@ class BinarySearchTree {
 
     // Start at the root
     this.root = removeNode(this.root, value);
+  }
+
+  //with private method
+  remove(value) {
+    this.root = this._removeNode(this.root, value);
+  }
+  //with private method
+  _removeNode(node, value) {
+    if (!node) return null;
+
+    if (value < node.value) {
+      node.left = this._removeNode(node.left, value);
+      return node;
+    } else if (value > node.value) {
+      node.right = this._removeNode(node.right, value);
+      return node;
+    } else {
+      // Case 1: No child
+      if (!node.left && !node.right) {
+        return null;
+      }
+      // Case 2: One child
+      if (!node.left) {
+        return node.right;
+      }
+      if (!node.right) {
+        return node.left;
+      }
+      // Case 3: Two children
+      let minRight = this._findMin(node.right);
+      node.value = minRight.value;
+      node.right = this._removeNode(node.right, minRight.value);
+      return node;
+    }
   }
 
   // Print the tree in order

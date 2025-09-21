@@ -58,6 +58,48 @@ class BinarySearchTree {
 
     return null;
   }
+
+  //with private method
+  remove(value) {
+    this.root = this._removeNode(this.root, value);
+  }
+  //with private method
+  _removeNode(node, value) {
+    if (!node) return null;
+
+    if (value < node.value) {
+      node.left = this._removeNode(node.left, value);
+      return node;
+    } else if (value > node.value) {
+      node.right = this._removeNode(node.right, value);
+      return node;
+    } else {
+      // Case 1: No child
+      if (!node.left && !node.right) {
+        return null;
+      }
+      // Case 2: One child
+      if (!node.left) {
+        return node.right;
+      }
+      if (!node.right) {
+        return node.left;
+      }
+      // Case 3: Two children
+      let minRight = this._findMin(node.right);
+      node.value = minRight.value;
+      node.right = this._removeNode(node.right, minRight.value);
+      return node;
+    }
+  }
+
+  //with private method
+  _findMin(node) {
+    while (node.left) {
+      node = node.left;
+    }
+    return node;
+  }
 }
 
 module.exports = { Node, BinarySearchTree };

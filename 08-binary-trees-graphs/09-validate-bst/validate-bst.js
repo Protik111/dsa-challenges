@@ -6,6 +6,13 @@ class Node {
   }
 }
 
-function isValidBST() {}
+function isValidBST(root) {
+  function traverseTree(node, min, max) {
+    if (!node) {
+      return true;
+    }
+  }
+  traverseTree(root, null, null);
+}
 
 module.exports = { Node, isValidBST };

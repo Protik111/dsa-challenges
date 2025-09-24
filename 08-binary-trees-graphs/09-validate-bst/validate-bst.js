@@ -11,6 +11,18 @@ function isValidBST(root) {
     if (!node) {
       return true;
     }
+
+    if (
+      (min !== null && node.value <= min) ||
+      (max !== null && node.value >= max)
+    ) {
+      return false;
+    }
+
+    return (
+      traverseTree(node.left, min, node.value) &&
+      traverseTree(node.right, node.value, max)
+    );
   }
   traverseTree(root, null, null);
 }

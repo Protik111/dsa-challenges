@@ -1,4 +1,16 @@
-class Graph {}
+class Graph {
+  constructor() {
+    this.adjacencyList = {};
+  }
+
+  addVertex(vertex) {
+    this.adjacencyList[vertex] = [];
+  }
+
+  //   addEdge(vertex1, vertex2) {
+  //     this.adjacencyList[vertex1] =
+  //   }
+}
 
 // Example Adjacency List
 // {

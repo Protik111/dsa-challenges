@@ -21,6 +21,21 @@ class Graph {
       (v) => v !== vertex1
     );
   }
+
+  removeVertex(vertex) {
+    while (this.adjacencyList[vertex].length) {
+      const adjacentVertext = this.adjacentVertext[vertex].pop();
+      this.removeEdge(vertex, adjacentVertext);
+    }
+
+    delete this.adjacencyList[vertex];
+  }
+
+  printAdjacencyList() {
+    for (let vertex in this.adjacencyList) {
+      console.log("Vertices", this.adjacencyList[vertex].join(", "));
+    }
+  }
 }
 
 // Example Adjacency List
